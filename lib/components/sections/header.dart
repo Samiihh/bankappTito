@@ -7,19 +7,18 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: ThemeColors.headerGradient),
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: ThemeColors.headerGradient),
 
-        /* colors: <Color>[
+          /* colors: <Color>[
             color.red[400],
             color.fromRGBO(255,138,0,1.0)
           ] */
-        borderRadius: BorderRadius.vertical(bottom: Radius.circular(10))
-      ),
-      child: Padding(padding: const EdgeInsets.fromLTRB(16.0, 80.0, 16.0, 16.0)
-      )
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(10))),
+      child:
+          Padding(padding: const EdgeInsets.fromLTRB(16.0, 80.0, 16.0, 16.0)),
       child: Row(
         // Eixo horizontal
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -27,8 +26,7 @@ class Header extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const <Widget>[
-              Text.rich(
-                TextSpan(
+              Text.rich(TextSpan(
                   text: 'R\$',
                   //style:TextStyle(fontSize: 16)
                   children: <TextSpan>[
@@ -36,11 +34,14 @@ class Header extends StatelessWidget {
                       text: '1000.00',
                       style: Theme.of(context).textTheme.bodyLarge,
                     )
-                  ]
-                )
-              )
+                  ])),
+              Text('Balanço disponivel')
             ],
-          )
+          ),
+          const Icon(
+            Icons.account_circle,
+            size: 42,
+          ),
         ],
       ),
     );
