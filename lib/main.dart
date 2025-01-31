@@ -1,4 +1,5 @@
 import 'package:bankapp/components/Themes/my_themes.dart';
+import 'package:bankapp/components/sections/conteudo.dart';
 import 'package:bankapp/screens/home.dart';
 import 'package:flutter/material.dart';
 
