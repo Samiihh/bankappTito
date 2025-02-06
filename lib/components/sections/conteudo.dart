@@ -6,6 +6,7 @@ class Conteudo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           const Icon(
             Icons.circle,
